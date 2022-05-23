@@ -78,11 +78,21 @@ function random(){
     else if (num2==6){
         document.getElementById("img22").src="images/dice6.png";
     }
-   
+    checker(dice1,dice2);
     
 
-} 
 
+
+} 
+function checker(dice1,dice2){
+    if (dice1[0]>dice2[0]){
+      txt.innerHTML = "Player 1 WINS";
+    }
+    else if(dice1[0]<dice2[0]){
+      txt.innerHTML = "Player 2 WINS";
+    }
+
+}
 
     </script>
   </body>
