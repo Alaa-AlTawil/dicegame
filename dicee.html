@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container">
+      <h1 id="header">Refresh Me</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" id="img11" src="">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" id="img22" src="">
+      </div>
+
+    </div>
+
+    <script>
+      document.querySelectorAll('.container').forEach(item => {
+    item.addEventListener('click', random)});
+    var txt=document.getElementById("header");
+    dice1 = [];
+    dice2 = [];
+
+function random(){
+    document.querySelectorAll('.container').forEach(item => {
+        item.removeEventListener('click', random)});
+    var nums = [1, 2, 3, 4, 5, 6 ];
+    var randindex1 = Math.floor(Math.random() * nums.length);
+    var randindex2 = Math.floor(Math.random() * nums.length);
+    var num1 = nums[randindex1];
+    var num2 = nums[randindex2];
+    dice1.push(num1);
+    dice2.push(num2);
+    
+} 
+
+
+    </script>
+  </body>
+</html>
